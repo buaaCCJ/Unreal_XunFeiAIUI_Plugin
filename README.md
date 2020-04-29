@@ -1,6 +1,6 @@
 # Unreal_XunFeiAIUI_Plugin
-Use the Xunfei AIUI plug-in to capture the sound in unreal and translate it into the corresponding text
-
+Use the Xunfei AIUI plug-in to capture the sound in unreal and translate it into the corresponding text.
+Speech Recognition Streamly
 ## 
 How to use
 1. 到这个网址生成appID以及下载对应的AIUI SDK https://aiui.iflyos.cn/apps/add ，注意appid和sdk是强绑定的
