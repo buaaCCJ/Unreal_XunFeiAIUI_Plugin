@@ -16,7 +16,7 @@
 
 #include <string>
 #include <map>
-
+#include  "windows.h"
 using namespace std;
 
 void callJava_SetNetType();

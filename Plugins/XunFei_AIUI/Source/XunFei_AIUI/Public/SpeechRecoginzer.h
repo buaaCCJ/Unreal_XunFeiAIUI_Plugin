@@ -1,7 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 /*
 @file
-@brief »ùÓÚÂ¼Òô½Ó¿ÚºÍÑ¶·ÉMSC½Ó¿Ú·â×°Ò»¸öMICÂ¼ÒôÊ¶±ðµÄÄ£¿é
+@brief ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½Ó¿Úºï¿½Ñ¶ï¿½ï¿½MSCï¿½Ó¿Ú·ï¿½×°Ò»ï¿½ï¿½MICÂ¼ï¿½ï¿½Ê¶ï¿½ï¿½ï¿½Ä£ï¿½ï¿½
 
 */
 #pragma once
@@ -52,7 +52,7 @@ struct speech_rec {
 
 
 
-//ÉùÃ÷´úÀí
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //DECLARE_DELEGATE_RetVal(FString, OnGetResult)
 
 class FSpeechRecoginzer

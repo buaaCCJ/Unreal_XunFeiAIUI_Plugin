@@ -30,6 +30,7 @@
 DECLARE_DELEGATE_ThreeParams(FIATDelegateSignature, FString,FString,int);
 
 using namespace aiui;
+#include  "windows.h"
 using namespace std;
 
 class FWriteAudioThread
@@ -88,7 +89,7 @@ class FAIUITester
 public:
 	IAIUIAgent* agent;
 
-	/* AIUIÊÂ¼þ»Øµ÷¼àÌýÆ÷ */
+	/* AIUIï¿½Â¼ï¿½ï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
 	FTestListener listener;
 	string encode(const unsigned char* bytes_to_encode, unsigned int in_len);
 
@@ -109,39 +110,39 @@ private:
 
 	void stopWriteThread();
 
-	/* ÓïÒôÓïÒå½Ó¿Ú */
+	/* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¿ï¿½ */
 	void write(bool repeat);
 
-	/* ÎÄ±¾ÓïÒå½Ó¿Ú */
+	/* ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½Ó¿ï¿½ */
 	void writeText();
 
-	/* ¶¯Ì¬ÉÏ´«×ÊÔ´Êý¾Ý */
+	/* ï¿½ï¿½Ì¬ï¿½Ï´ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ */
 	void syncSchema();
 
 	void querySyncStatus();
 
-	/* ¿ªÊ¼tts */
+	/* ï¿½ï¿½Ê¼tts */
 	void startTts();
 
-	/* ÔÝÍ£tts */
+	/* ï¿½ï¿½Í£tts */
 	void pauseTts();
 
-	/* ¼ÌÐøÉÏ´ÎµÄtts */
+	/* ï¿½ï¿½ï¿½ï¿½ï¿½Ï´Îµï¿½tts */
 	void resumeTts();
 
-	/* È¡Ïû±¾´Îtts */
+	/* È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½tts */
 	void cancelTts();
 
 public:
 	void initWrite();
 	FWriteAudioThread * writeThread;
-	/*´´½¨AIUI´úÀí*/
+	/*ï¿½ï¿½ï¿½ï¿½AIUIï¿½ï¿½ï¿½ï¿½*/
 	void createAgent();
 
 	void setRootDir(FString Path);
-	/* »½ÐÑ½Ó¿Ú */
+	/* ï¿½ï¿½ï¿½Ñ½Ó¿ï¿½ */
 	void wakeup();
-	/*Ïú»Ù*/
+	/*ï¿½ï¿½ï¿½ï¿½*/
 	void destory();
 	void readCmd();
 	void test();

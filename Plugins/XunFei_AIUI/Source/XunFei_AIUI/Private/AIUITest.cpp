@@ -22,7 +22,7 @@ void FWriteAudioThread::WriteAudio(char audioBuffer[], int len) {
 		memcpy(buffer->data(), audioBuffer, len);
 
 		const wchar_t * para = L"data_type=audio,sample_rate=16000,msc.lng=117.14430236816406,msc.lat=31.831058502197266,"
-			L"rec_user_data={\"sceneInfo\":{},\"recHotWords\":\"·µ»Ø|Ö÷½çÃæ|Í¨ÖªÀ¸|Í¼Æ¬|°Ù¶È|±¾µØ|Ö÷Ò³|Ö÷Ä¿Â¼|¸ùÄ¿Â¼|ÏÂÔØ|¿â|ÍË³ö|Ö÷Ìâ|ÉèÖÃ|ÍøÂçÓ²ÅÌ|ÐÂ½¨|ËÑË÷|Ë¢ÐÂ|ÊÓÍ¼|´°¿Ú\"}";
+			L"rec_user_data={\"sceneInfo\":{},\"recHotWords\":\"ï¿½ï¿½ï¿½ï¿½|ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½|Í¨Öªï¿½ï¿½|Í¼Æ¬|ï¿½Ù¶ï¿½|ï¿½ï¿½ï¿½ï¿½|ï¿½ï¿½Ò³|ï¿½ï¿½Ä¿Â¼|ï¿½ï¿½Ä¿Â¼|ï¿½ï¿½ï¿½ï¿½|ï¿½ï¿½|ï¿½Ë³ï¿½|ï¿½ï¿½ï¿½ï¿½|ï¿½ï¿½ï¿½ï¿½|ï¿½ï¿½ï¿½ï¿½Ó²ï¿½ï¿½|ï¿½Â½ï¿½|ï¿½ï¿½ï¿½ï¿½|Ë¢ï¿½ï¿½|ï¿½ï¿½Í¼|ï¿½ï¿½ï¿½ï¿½\"}";
 		unsigned long len = ::WideCharToMultiByte(CP_UTF8, NULL, para, -1, NULL, NULL, NULL, NULL);
 		char *mbcbuffer = new char[len];
 		::WideCharToMultiByte(CP_UTF8, NULL, para, -1, mbcbuffer, len, NULL, NULL);
@@ -43,7 +43,7 @@ void FWriteAudioThread::WriteAudio(char audioBuffer[], int len) {
 		writeMsg->destroy();
 	}
 }
-/* Ñ­»·Ð´Èë²âÊÔÒôÆµ£¬Ã¿´ÎÐ´1280B */
+/* Ñ­ï¿½ï¿½Ð´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æµï¿½ï¿½Ã¿ï¿½ï¿½Ð´1280B */
 bool FWriteAudioThread::threadLoop()
 {
 	char audio[1280];
@@ -55,7 +55,7 @@ bool FWriteAudioThread::threadLoop()
 		memcpy(buffer->data(), audio, len1);
 
 		const wchar_t * para = L"data_type=audio,sample_rate=16000,msc.lng=117.14430236816406,msc.lat=31.831058502197266,"
-			L"rec_user_data={\"sceneInfo\":{},\"recHotWords\":\"·µ»Ø|Ö÷½çÃæ|Í¨ÖªÀ¸|Í¼Æ¬|°Ù¶È|±¾µØ|Ö÷Ò³|Ö÷Ä¿Â¼|¸ùÄ¿Â¼|ÏÂÔØ|¿â|ÍË³ö|Ö÷Ìâ|ÉèÖÃ|ÍøÂçÓ²ÅÌ|ÐÂ½¨|ËÑË÷|Ë¢ÐÂ|ÊÓÍ¼|´°¿Ú\"}";
+			L"rec_user_data={\"sceneInfo\":{},\"recHotWords\":\"ï¿½ï¿½ï¿½ï¿½|ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½|Í¨Öªï¿½ï¿½|Í¼Æ¬|ï¿½Ù¶ï¿½|ï¿½ï¿½ï¿½ï¿½|ï¿½ï¿½Ò³|ï¿½ï¿½Ä¿Â¼|ï¿½ï¿½Ä¿Â¼|ï¿½ï¿½ï¿½ï¿½|ï¿½ï¿½|ï¿½Ë³ï¿½|ï¿½ï¿½ï¿½ï¿½|ï¿½ï¿½ï¿½ï¿½|ï¿½ï¿½ï¿½ï¿½Ó²ï¿½ï¿½|ï¿½Â½ï¿½|ï¿½ï¿½ï¿½ï¿½|Ë¢ï¿½ï¿½|ï¿½ï¿½Í¼|ï¿½ï¿½ï¿½ï¿½\"}";
 		unsigned long len = ::WideCharToMultiByte(CP_UTF8, NULL, para, -1, NULL, NULL, NULL, NULL);
 		char *mbcbuffer = new char[len];
 		::WideCharToMultiByte(CP_UTF8, NULL, para, -1, mbcbuffer, len, NULL, NULL);
@@ -152,13 +152,13 @@ bool FWriteAudioThread::run()
 string mSyncSid;
 
 /*
-	AIUI ÊÂ¼þ»Øµ÷½Ó¿Ú
+	AIUI ï¿½Â¼ï¿½ï¿½Øµï¿½ï¿½Ó¿ï¿½
 */
 void FTestListener::onEvent(const IAIUIEvent& event) const
 {
 
 	switch (event.getEventType()) {
-		/* ×´Ì¬»Øµ÷        */
+		/* ×´Ì¬ï¿½Øµï¿½        */
 	case AIUIConstant::EVENT_STATE:
 	{
 		switch (event.getArg1()) {
@@ -179,20 +179,20 @@ void FTestListener::onEvent(const IAIUIEvent& event) const
 		}
 	} break;
 
-	/* »½ÐÑÊÂ¼þ»Øµ÷        £¬ »½ÐÑ³É¹¦»áµ÷ÓÃ´Ë½Ó¿Ú£¬²¢ÇÒ¿´µ½»½ÐÑÐÅÏ¢               */
+	/* ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½Øµï¿½        ï¿½ï¿½ ï¿½ï¿½ï¿½Ñ³É¹ï¿½ï¿½ï¿½ï¿½ï¿½Ã´Ë½Ó¿Ú£ï¿½ï¿½ï¿½ï¿½Ò¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢               */
 
 	case AIUIConstant::EVENT_WAKEUP:
 	{
 		UE_LOG(LogTemp, Log, TEXT("EVENT_WAKEUP::%s"), event.getInfo());
 	} break;
 
-	/* ÐÝÃßÊÂ¼þ»Øµ÷            */
+	/* ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½Øµï¿½            */
 	case AIUIConstant::EVENT_SLEEP:
 	{
 		UE_LOG(LogTemp, Log, TEXT("EVENT_SLEEP:arg1=::%s"), event.getArg1());
 	} break;
 
-	/* VADÊÂ¼þ»Øµ÷£¬¼ì²âµ½Ç°ºó¶Ëµã  */
+	/* VADï¿½Â¼ï¿½ï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½âµ½Ç°ï¿½ï¿½Ëµï¿½  */
 	case AIUIConstant::EVENT_VAD:
 	{
 		switch (event.getArg1()) {
@@ -215,7 +215,7 @@ void FTestListener::onEvent(const IAIUIEvent& event) const
 	} break;
 
 	/*
-		×îÖØÒªµÄ½á¹ûÊÂ¼þ»Øµ÷£¬ÊÕµ½ÎÄ±¾ºÍÓïÒôÓïÒå¶¼»á·µ»Ø´ËÊÂ¼þ£¬ÀïÃæÓÐ½á¹ûÐÅÏ¢
+		ï¿½ï¿½ï¿½ï¿½Òªï¿½Ä½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½Øµï¿½ï¿½ï¿½ï¿½Õµï¿½ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½å¶¼ï¿½á·µï¿½Ø´ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð½ï¿½ï¿½ï¿½ï¿½Ï¢
 	*/
 	case AIUIConstant::EVENT_RESULT:
 	{
@@ -254,7 +254,7 @@ void FTestListener::onEvent(const IAIUIEvent& event) const
 			{
 				resultStr = string(buffer, dataLen);
 
-				/*ÏÂÃæµÄ²Ù×÷Ö÷ÒªÊÇÈÃ·µ»ØµÄUTF-8±àÂëµÄ½á¹û×ª»¯ÎªGBK¸ñÊ½£¬ÒÔÔÚdos´°¿ÚÕý³£ÏÔÊ¾*/
+				/*ï¿½ï¿½ï¿½ï¿½Ä²ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½Ã·ï¿½ï¿½Øµï¿½UTF-8ï¿½ï¿½ï¿½ï¿½Ä½ï¿½ï¿½×ªï¿½ï¿½ÎªGBKï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½dosï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾*/
 
 				//int nRetLen = FileUtil::UTF8ToGBK((unsigned char *)resultStr.c_str(), NULL, NULL);
 
@@ -331,7 +331,7 @@ void FTestListener::onEvent(const IAIUIEvent& event) const
 			if (2 == dts && "AIUI DATA NULL" == errorInfo)
 			{
 				/*
-					Âú×ãÕâÁ½¸öÌõ¼þµÄÊÇ¿Õ½á¹û£¬Ö±½Ó¶ªÆú
+					ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç¿Õ½ï¿½ï¿½ï¿½ï¿½Ö±ï¿½Ó¶ï¿½ï¿½ï¿½
 				*/
 			}
 			else if (3 == dts)
@@ -355,6 +355,34 @@ void FTestListener::onEvent(const IAIUIEvent& event) const
 					mTtsFileHelper->closeFile();
 				}
 			}
+		}else if(sub == "iat")
+		{
+			Json::Value empty;
+			Json::Value contentId = content.get("cnt_id", empty);
+			string cnt_id = contentId.asString();
+			int dataLen = 0;
+			const char* buffer = event.getData()->getBinary(cnt_id.c_str(), &dataLen);
+			if (contentId.empty()) {
+				cout << "Content Id is empty" << endl;
+				break;
+			}
+			string resultStr = string(buffer, dataLen);
+			Json::Value resultJson;
+			
+			if (reader.parse(resultStr, resultJson, false)) {
+				const auto& text = resultJson["text"];
+				const auto& ws = text["ws"];
+
+				FString temp;
+
+				for (const auto& item : ws) {
+					const auto& cw = item["cw"][0];
+					temp += FString(UTF8_TO_TCHAR(cw["w"].asString().c_str()));
+				}
+				OnIATFinished.ExecuteIfBound(temp, temp, -1);
+
+			}
+
 		}
 
 	} break;
@@ -433,7 +461,7 @@ void FTestListener::onEvent(const IAIUIEvent& event) const
 		char* lpGBKStr = new char[nRetLen + 1];
 		nRetLen = FileUtil::UTF8ToGBK((unsigned char *)event.getInfo(), (unsigned char *)lpGBKStr, nRetLen);
 
-		UE_LOG(LogTemp, Log, TEXT("IAT__error info:%s"), lpGBKStr);
+		UE_LOG(LogTemp, Log, TEXT("IAT__error info:%s"), UTF8_TO_TCHAR(lpGBKStr));
 	} break;
 	}
 }
@@ -467,7 +495,7 @@ FTestListener::~FTestListener()
 
 
 /*
-	´´½¨AIUI´úÀí£¬´«ÈëÓÃ»§ÉèÖÃµÄ²ÎÊý£¬Í¨¹ýÉú³ÉµÄAIUI´úÀí¶ÔÏóagent¸øAIUI SDK·¢ÃüÁî
+	ï¿½ï¿½ï¿½ï¿½AIUIï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ÃµÄ²ï¿½ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½Éµï¿½AIUIï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½agentï¿½ï¿½AIUI SDKï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 */
 void FAIUITester::createAgent()
 {
@@ -488,16 +516,16 @@ void FAIUITester::createAgent()
 		paramJson["login"] = appidJson;
 		paramJson["vad"]["res_path"] = string(TCHAR_TO_UTF8(*(RootPath + TEXT("assets/vad/meta_vad_16k.jet"))));
 
-		/* Èç¹ûÅäÖÃÁËÊ¹ÓÃµ¥Â·ivw»½ÐÑ£¬ÄÇÃ´ÐèÒªÓÃ»§×Ô¼º½«Ö§³Öµ¥Â·»½ÐÑµÄmsc.dll·ÅÔÚaiui.dllÍ¬Ä¿Â¼ÏÂ£¬²¢ÇÒ
-			ÅäÖÃºÃ»½ÐÑ×ÊÔ´µÄÂ·¾¶£»
-			Èç¹ûÉèÖÃÁËµ¥Â·»½ÐÑ£¬ÔÚcreateAgent()³É¹¦Ö®ºó£¬¾Í²»ÐèÒªµ÷ÓÃwakeUp()½Ó¿ÚÍ¨¹ýÍâ²¿·¢ËÍÃüÁîµÄ·½Ê½½øÐÐ»½ÐÑ£¬¿ÉÒÔÍ¨¹ýÐ´Èë»½ÐÑÒôÆµµÄ·½Ê½£»
-			Ä¬ÈÏÃ»ÓÐÉèÖÃivw»½ÐÑ¡£
+		/* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½Ãµï¿½Â·ivwï¿½ï¿½ï¿½Ñ£ï¿½ï¿½ï¿½Ã´ï¿½ï¿½Òªï¿½Ã»ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½Ö§ï¿½Öµï¿½Â·ï¿½ï¿½ï¿½Ñµï¿½msc.dllï¿½ï¿½ï¿½ï¿½aiui.dllÍ¬Ä¿Â¼ï¿½Â£ï¿½ï¿½ï¿½ï¿½ï¿½
+			ï¿½ï¿½ï¿½ÃºÃ»ï¿½ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½Â·ï¿½ï¿½ï¿½ï¿½
+			ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ëµï¿½Â·ï¿½ï¿½ï¿½Ñ£ï¿½ï¿½ï¿½createAgent()ï¿½É¹ï¿½Ö®ï¿½ó£¬¾Í²ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½wakeUp()ï¿½Ó¿ï¿½Í¨ï¿½ï¿½ï¿½â²¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½Ê½ï¿½ï¿½ï¿½Ð»ï¿½ï¿½Ñ£ï¿½ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½Ð´ï¿½ë»½ï¿½ï¿½ï¿½ï¿½Æµï¿½Ä·ï¿½Ê½ï¿½ï¿½
+			Ä¬ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ivwï¿½ï¿½ï¿½Ñ¡ï¿½
 		*/
 		string wakeup_mode = paramJson["speech"]["wakeup_mode"].asString();
 		if (wakeup_mode == "ivw")
 		{
 			/*
-				Ê¹ÓÃµ¥Â·»½ÐÑÊ±£¬Ê×ÏÈÐèÒªµ÷¶¯msc¿âÀïÃæµÄMSPLogin()
+				Ê¹ï¿½Ãµï¿½Â·ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½mscï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½MSPLogin()
 			*/
 			//string lgiparams = "appid=5d08b151,engine_start=ivw";
 			//MSPLogin(NULL, NULL, lgiparams.c_str());
@@ -549,8 +577,8 @@ void FAIUITester::setRootDir(FString Path)
 }
 
 /*
-	Íâ²¿»½ÐÑ½Ó¿Ú£¬Í¨¹ý·¢ËÍCMD_WAKEUPÃüÁîÊ¹AIUI SDK×ªÈë»½ÐÑ×´Ì¬£¬
-	»½ÐÑ×´Ì¬ÏÂ¾Í¿ÉÒÔÐ´ÈëÎÄ±¾»òÓïÒå£¬µÃµ½½á¹û
+	ï¿½â²¿ï¿½ï¿½ï¿½Ñ½Ó¿Ú£ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½CMD_WAKEUPï¿½ï¿½ï¿½ï¿½Ê¹AIUI SDK×ªï¿½ë»½ï¿½ï¿½×´Ì¬ï¿½ï¿½
+	ï¿½ï¿½ï¿½ï¿½×´Ì¬ï¿½Â¾Í¿ï¿½ï¿½ï¿½Ð´ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½å£¬ï¿½Ãµï¿½ï¿½ï¿½ï¿½
 */
 void FAIUITester::wakeup()
 {
@@ -566,8 +594,8 @@ void FAIUITester::wakeup()
 	}
 }
 
-/*Æô¶¯AIUI SDK, ¸Ã½Ó¿ÚÓëstop()½Ó¿Ú¶ÔÓ¦£¬Ö»ÓÐÔÚµ÷ÓÃÁËstop()½Ó¿ÚÍ£Ö¹ÁËAIUI SDKµÄÇé¿öÏÂ£¬
-ÐèÒªÔÙ´ÎÆô¶¯AIUI SDKÊ±µ÷ÓÃ¸Ã½Ó¿Ú
+/*ï¿½ï¿½ï¿½AIUI SDK, ï¿½Ã½Ó¿ï¿½ï¿½ï¿½stop()ï¿½Ó¿Ú¶ï¿½Ó¦ï¿½ï¿½Ö»ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½stop()ï¿½Ó¿ï¿½Í£Ö¹ï¿½ï¿½AIUI SDKï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â£ï¿½
+ï¿½ï¿½Òªï¿½Ù´ï¿½ï¿½ï¿½ï¿½AIUI SDKÊ±ï¿½ï¿½ï¿½Ã¸Ã½Ó¿ï¿½
 */
 void FAIUITester::start()
 {
@@ -580,7 +608,7 @@ void FAIUITester::start()
 }
 
 
-/*Í£Ö¹AIUI      SDK£¬Í£Ö¹Ö®ºó´¦ÓÚ¿ÕÏÐ×´Ì¬  */
+/*Í£Ö¹AIUI      SDKï¿½ï¿½Í£Ö¹Ö®ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½ï¿½×´Ì¬  */
 void FAIUITester::stop()
 {
 	if (NULL != agent)
@@ -593,8 +621,8 @@ void FAIUITester::stop()
 
 
 /*
-	Ð´ÈëÒôÆµ½Ó¿Ú
-	¿ªÆôÐÂµÄÏß³ÌÐ´ÈëÒôÆµ£¬ÒôÆµ´ÓÎÄ¼þ¶ÁÈ¡
+	Ð´ï¿½ï¿½ï¿½ï¿½Æµï¿½Ó¿ï¿½
+	ï¿½ï¿½ï¿½ï¿½ï¿½Âµï¿½ï¿½ß³ï¿½Ð´ï¿½ï¿½ï¿½ï¿½Æµï¿½ï¿½ï¿½ï¿½Æµï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½È¡
 */
 void FAIUITester::write(bool repeat)
 {
@@ -616,7 +644,7 @@ void FAIUITester::initWrite() {
 	//write(false);
 }
 
-/*Ö÷¶¯Ïú»ÙÐ´ÈëÒôÆµµÄÏß³Ì*/
+/*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð´ï¿½ï¿½ï¿½ï¿½Æµï¿½ï¿½ï¿½ß³ï¿½*/
 void FAIUITester::stopWriteThread()
 {
 	if (writeThread) {
@@ -627,8 +655,8 @@ void FAIUITester::stopWriteThread()
 }
 
 /*
-	×´Ì¬ÖØÖÃ½Ó¿Ú£¬·¢ËÍCMD_RESETÃüÁî¸øAIUI SDKÖ®ºó£¬SDKÔ­±¾µÄ»½ÐÑ×´Ì¬»á±»ÖØÖÃÎª·Ç»½ÐÑ×´Ì¬£¬
-	ÐèÒªÖØÐÂ»½ÐÑ²ÅÄÜÔÙ´ÎÐ´ÈëÒôÆµ»òÎÄ±¾
+	×´Ì¬ï¿½ï¿½ï¿½Ã½Ó¿Ú£ï¿½ï¿½ï¿½ï¿½ï¿½CMD_RESETï¿½ï¿½ï¿½ï¿½ï¿½AIUI SDKÖ®ï¿½ï¿½SDKÔ­ï¿½ï¿½ï¿½Ä»ï¿½ï¿½ï¿½×´Ì¬ï¿½á±»ï¿½ï¿½ï¿½ï¿½Îªï¿½Ç»ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½
+	ï¿½ï¿½Òªï¿½ï¿½ï¿½Â»ï¿½ï¿½Ñ²ï¿½ï¿½ï¿½ï¿½Ù´ï¿½Ð´ï¿½ï¿½ï¿½ï¿½Æµï¿½ï¿½ï¿½Ä±ï¿½
 */
 void FAIUITester::reset()
 {
@@ -641,15 +669,15 @@ void FAIUITester::reset()
 }
 
 /*
-	ÎÄ±¾ÓïÒå½Ó¿Ú
+	ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½Ó¿ï¿½
 */
 void FAIUITester::writeText()
 {
 	if (NULL != agent)
 	{
-		const wchar_t * text = L"²é¸½½üµÄÃÀÊ³¡£";
+		const wchar_t * text = L"ï¿½é¸½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê³ï¿½ï¿½";
 
-		/*´«ÈëµÄÎÄ±¾ÐèÒª×ª»¯Îªutf-8±àÂë*/
+		/*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½Òª×ªï¿½ï¿½Îªutf-8ï¿½ï¿½ï¿½ï¿½*/
 		unsigned long len = ::WideCharToMultiByte(CP_UTF8, NULL, text, -1, NULL, NULL, NULL, NULL) - 1;
 		char *mbcbuffer = new char[len];
 		::WideCharToMultiByte(CP_UTF8, NULL, text, -1, mbcbuffer, len, NULL, NULL);
@@ -667,7 +695,7 @@ void FAIUITester::writeText()
 }
 
 /*
-	²éÑ¯Êý¾ÝÍ¬²½×´Ì¬
+	ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½×´Ì¬
 */
 void FAIUITester::querySyncStatus()
 {
@@ -675,7 +703,7 @@ void FAIUITester::querySyncStatus()
 	{
 		Json::Value paramJson;
 
-		/* ²ÎÊý°üº¬ÐèÒª¶ÔÓ¦Í¬²½ÉÏ´«²Ù×÷µÄsid */
+		/* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½Ó¦Í¬ï¿½ï¿½ï¿½Ï´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½sid */
 		cout << "query sid is " << mSyncSid << endl;
 		paramJson["sid"] = mSyncSid;
 
@@ -745,7 +773,7 @@ void FAIUITester::syncSchema()
 		dataParamJson["id_name"] = "uid";
 		dataParamJson["res_name"] = "IFLYTEK.telephone_contact";
 
-		const wchar_t * text = L"{\"name\":\"³ÌÐòÔ±\", \"alias\":\"¿ª·¢\"}\n{\"name\":\"Éè¼ÆÊ¦\", \"alias\":\"Éè¼Æ\"}\n{\"name\":\"²úÆ·¾­Àí\", \"alias\":\"²úÆ·\"}";
+		const wchar_t * text = L"{\"name\":\"ï¿½ï¿½ï¿½ï¿½Ô±\", \"alias\":\"ï¿½ï¿½ï¿½ï¿½\"}\n{\"name\":\"ï¿½ï¿½ï¿½Ê¦\", \"alias\":\"ï¿½ï¿½ï¿½\"}\n{\"name\":\"ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½\", \"alias\":\"ï¿½ï¿½Æ·\"}";
 		unsigned long len = ::WideCharToMultiByte(CP_UTF8, NULL, text, -1, NULL, NULL, NULL, NULL) - 1;
 		char *mbcbuffer = new char[len];
 		::WideCharToMultiByte(CP_UTF8, NULL, text, -1, mbcbuffer, len, NULL, NULL);
@@ -781,8 +809,8 @@ void FAIUITester::startTts()
 	if (NULL != agent)
 	{
 		const wchar_t * text = L"NIHAO";
-		//const wchar_t * text = TEXT("¿Æ´óÑ¶·É");
-		/*´«ÈëµÄÎÄ±¾ÐèÒª×ª»¯Îªutf-8±àÂë*/
+		//const wchar_t * text = TEXT("ï¿½Æ´ï¿½Ñ¶ï¿½ï¿½");
+		/*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½Òª×ªï¿½ï¿½Îªutf-8ï¿½ï¿½ï¿½ï¿½*/
 		unsigned long len = ::WideCharToMultiByte(CP_UTF8, NULL, text, -1, NULL, NULL, NULL, NULL) - 1;
 		char *mbcbuffer = new char[len];
 		::WideCharToMultiByte(CP_UTF8, NULL, text, -1, mbcbuffer, len, NULL, NULL);
@@ -797,23 +825,23 @@ void FAIUITester::startTts()
 		}
 
 		/*
-		 arg1È¡ÖµËµÃ÷£º
-			START	¿ªÊ¼ºÏ³É	ºÏ³É·¢ÒôÈË£¬ÓïËÙÓïµ÷µÈ
-			CANCEL	È¡ÏûºÏ³É	ÎÞ
-			PAUSE	ÔÝÍ£²¥·Å	ÎÞ
-			RESUME	»Ö¸´²¥·Å	ÎÞ
+		 arg1È¡ÖµËµï¿½ï¿½ï¿½ï¿½
+			START	ï¿½ï¿½Ê¼ï¿½Ï³ï¿½	ï¿½Ï³É·ï¿½ï¿½ï¿½ï¿½Ë£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			CANCEL	È¡ï¿½ï¿½ï¿½Ï³ï¿½	ï¿½ï¿½
+			PAUSE	ï¿½ï¿½Í£ï¿½ï¿½ï¿½ï¿½	ï¿½ï¿½
+			RESUME	ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½	ï¿½ï¿½
 		*/
 
 		/*
-		ºÏ³É²ÎÊýÊ¾Àý£º
+		ï¿½Ï³É²ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½
 		String params = "vcn=xiaoyan,speed=50,pitch=50,volume=50"
 
-		²ÎÊý×Ö¶ÎËµÃ÷£º
-			vcn	·¢ÒôÈË£¬Èçxiaoyan
-			speed	ËÙ¶È£¬0-100
-			pitch	Óïµ÷£¬0-100
-			volume	ÒôÁ¿£¬0-100
-			ent	ÒýÇæ£¬Ä¬ÈÏaisound£¬Èç¹ûÐèÒª½ÏºÃµÄÐ§¹û£¬¿ÉÉèÖÃ³Éxtts
+		ï¿½ï¿½ï¿½ï¿½ï¿½Ö¶ï¿½Ëµï¿½ï¿½ï¿½ï¿½
+			vcn	ï¿½ï¿½ï¿½ï¿½ï¿½Ë£ï¿½ï¿½ï¿½xiaoyan
+			speed	ï¿½Ù¶È£ï¿½0-100
+			pitch	ï¿½ï¿½ï¿½ï¿½ï¿½0-100
+			volume	ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½0-100
+			ent	ï¿½ï¿½ï¿½æ£¬Ä¬ï¿½ï¿½aisoundï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ÏºÃµï¿½Ð§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã³ï¿½xtts
 		*/
 
 		string paramStr = "vcn=xiaoyan";
@@ -884,23 +912,23 @@ void FAIUITester::destory()
 
 void FAIUITester::showIntroduction(bool detail)
 {
-	cout << "demoÊ¾ÀýÎªÊäÈëÃüÁî£¬µ÷ÓÃ¶ÔÓ¦µÄº¯Êý£¬Ê¹ÓÃAIUI SDKÍê³ÉÎÄ±¾Àí½â£¬ÓïÒåÀí½â£¬ÎÄ±¾ºÏ³ÉµÈ¹¦ÄÜ£¬Èç£º" << endl;
-	cout << "cÃüÁî£¬´´½¨AIUI´úÀí£¬ÓëAIUI SDK½»»¥¶¼ÊÇÍ¨¹ý´úÀí·¢ËÍÏûÏ¢µÄ·½Ê½½øÐÐ, ËùÒÔµÚÒ»²½±ØÐëÊÇÊäÈë¸ÃÃüÁî£»" << endl;
-	cout << "wÃüÁî£¬·¢ËÍÍâ²¿»½ÐÑÃüÁî»½ÐÑAIUI£¬AIUIÖ»ÓÐÔÚ»½ÐÑ¹ýºó²Å¿ÉÒÔ½»»¥£»" << endl;
-	cout << "wrÃüÁî£¬µ¥´Î¶ÁÈ¡±¾µØpcmÒôÆµÎÄ¼þ£¬Ð´Èësdk£¬sdk»á·µ»ØÔÆ¶ËÊ¶±ðµÄÌýÐ´£¬ÓïÒå½á¹û£»" << endl;
-	cout << "wrtÃüÁî£¬×Ö·û´®ÎÄ±¾Ð´Èësdk£¬sdk»á·µ»ØÔÆ¶ËÊ¶±ðµÄÓïÒå½á¹û£»" << endl;
-	cout << "sttsÃüÁî£¬µ¥ºÏ³ÉÊ¾Àý£¬·µ»ØºÏ³ÉµÄÒôÆµ£¬demo½«ÒôÆµ±£´æÎª±¾µØµÄpcmÎÄ¼þ£»" << endl;
-	cout << "helpÃüÁî£¬ÏÔÊ¾±¾demoÌá¹©µÄÊ¾ÀýµÄ½éÉÜ£»" << endl;
+	cout << "demoÊ¾ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½î£¬ï¿½ï¿½ï¿½Ã¶ï¿½Ó¦ï¿½Äºï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½AIUI SDKï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½â£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â£¬ï¿½Ä±ï¿½ï¿½Ï³ÉµÈ¹ï¿½ï¿½Ü£ï¿½ï¿½ç£º" << endl;
+	cout << "cï¿½ï¿½ï¿½î£¬ï¿½ï¿½ï¿½ï¿½AIUIï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½AIUI SDKï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½Ä·ï¿½Ê½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½Ôµï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½î£»" << endl;
+	cout << "wï¿½ï¿½ï¿½î£¬ï¿½ï¿½ï¿½ï¿½ï¿½â²¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½î»½ï¿½ï¿½AIUIï¿½ï¿½AIUIÖ»ï¿½ï¿½ï¿½Ú»ï¿½ï¿½Ñ¹ï¿½ï¿½ï¿½Å¿ï¿½ï¿½Ô½ï¿½ï¿½ï¿½ï¿½ï¿½" << endl;
+	cout << "wrï¿½ï¿½ï¿½î£¬ï¿½ï¿½ï¿½Î¶ï¿½È¡ï¿½ï¿½ï¿½ï¿½pcmï¿½ï¿½Æµï¿½Ä¼ï¿½ï¿½ï¿½Ð´ï¿½ï¿½sdkï¿½ï¿½sdkï¿½á·µï¿½ï¿½ï¿½Æ¶ï¿½Ê¶ï¿½ï¿½ï¿½ï¿½ï¿½Ð´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" << endl;
+	cout << "wrtï¿½ï¿½ï¿½î£¬ï¿½Ö·ï¿½ï¿½ï¿½ï¿½Ä±ï¿½Ð´ï¿½ï¿½sdkï¿½ï¿½sdkï¿½á·µï¿½ï¿½ï¿½Æ¶ï¿½Ê¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" << endl;
+	cout << "sttsï¿½ï¿½ï¿½î£¬ï¿½ï¿½ï¿½Ï³ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ØºÏ³Éµï¿½ï¿½ï¿½Æµï¿½ï¿½demoï¿½ï¿½ï¿½ï¿½Æµï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½Øµï¿½pcmï¿½Ä¼ï¿½ï¿½ï¿½" << endl;
+	cout << "helpï¿½ï¿½ï¿½î£¬ï¿½ï¿½Ê¾ï¿½ï¿½demoï¿½á¹©ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½Ä½ï¿½ï¿½Ü£ï¿½" << endl;
 
 	if (detail)
 	{
-		cout << "ÊäÈëcÃüÁîºó£¬Õý³£Çé¿ö·µ»Ø½á¹ûÎª£º" << endl;
+		cout << "ï¿½ï¿½ï¿½ï¿½cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø½ï¿½ï¿½Îªï¿½ï¿½" << endl;
 		cout << "EVENT_STATE:READY" << endl;
-		cout << "ÊäÈëwÃüÁîºó£¬Õý³£Çé¿ö·µ»Ø½á¹ûÎª: " << endl;
+		cout << "ï¿½ï¿½ï¿½ï¿½wï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø½ï¿½ï¿½Îª: " << endl;
 		cout << "EVENT_WAKEUP:{\"CMScore\":-1,\"angle\":-1,\"beam\":0,\"channel\":-1,\"power\":-1}" << endl;
 		cout << "EVENT_STATE:WORKING" << endl;
 
-		cout << "ÌýÐ´£¬ÓïÒå£¬ºÏ³ÉµÈ½á¹ûÔÚonEventº¯Êý£¬¸Ãº¯ÊýÊÇ½á¹û»Øµ÷£¬Çë×ÐÏ¸ÑÐ¾¿¡£" << endl;
+		cout << "ï¿½ï¿½Ð´ï¿½ï¿½ï¿½ï¿½ï¿½å£¬ï¿½Ï³ÉµÈ½ï¿½ï¿½ï¿½ï¿½onEventï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ãºï¿½ï¿½ï¿½ï¿½Ç½ï¿½ï¿½ï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½Ð¾ï¿½ï¿½ï¿½" << endl;
 	}
 }
 

@@ -29,17 +29,17 @@ void FXunFeiIAT::SetStop()
 	SetEvent(events[EVT_STOP]);
 	return;
 }
-//µÃµ½·­Òë½á¹û
+//ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 void on_result(const char *result, char is_last)
 {
 
 }
-//¿ªÊ¼Ëµ»°
+//ï¿½ï¿½Ê¼Ëµï¿½ï¿½
 void on_speech_begin()
 {
 	UE_LOG(LogTemp,Log,TEXT("Start Listening...\n"));
 }
-//ËµÍê
+//Ëµï¿½ï¿½
 void on_speech_end(int reason)
 {
 	if (reason == END_REASON_VAD_DETECT)
@@ -120,7 +120,7 @@ void FXunFeiIAT::beginMicLoop()
 	FSpeechRecoginzer::GetInstance().sr_uninit(&iat);
 }
 
-//µ¥¶ÀÏß³ÌÀ´ÔËÐÐÓïÒôÊ¶±ðÓë½»»¥
+//ï¿½ï¿½ï¿½ï¿½ï¿½ß³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¶ï¿½ï¿½ï¿½ë½»ï¿½ï¿½
 unsigned int __stdcall begin(void * paramptr)
 {
 	FXunFeiIAT::beginMicLoop();
@@ -129,7 +129,7 @@ unsigned int __stdcall begin(void * paramptr)
 
 void FXunFeiIAT::StartIATThread() const
 {
-	//´´½¨audio event
+	//ï¿½ï¿½ï¿½ï¿½audio event
 	for (int i = 0; i < EVT_TOTAL; ++i) {
 		events[i] = CreateEvent(NULL, FALSE, FALSE, NULL);
 	}

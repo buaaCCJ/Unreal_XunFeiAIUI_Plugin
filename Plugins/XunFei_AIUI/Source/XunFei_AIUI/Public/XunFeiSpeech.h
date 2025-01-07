@@ -1,6 +1,6 @@
 #pragma once
 /*
-* 语音听写(iFly Auto Transform)技术能够实时地将语音转换成对应的文字。
+* 锟斤拷锟斤拷锟斤拷写(iFly Auto Transform)锟斤拷锟斤拷锟杰癸拷实时锟截斤拷锟斤拷锟斤拷转锟斤拷锟缴讹拷应锟斤拷锟斤拷锟街★拷
 */
 #include "XunFei_AIUI.h"
 
@@ -13,7 +13,7 @@ extern FAIUITester AIUITester;
 extern HANDLE  thread_hdl_;
 extern unsigned int thread_id_;
 
-// 识别状态类型
+// 识锟斤拷状态锟斤拷锟斤拷
 enum {
 	EVT_START = 0,
 	EVT_STOP,

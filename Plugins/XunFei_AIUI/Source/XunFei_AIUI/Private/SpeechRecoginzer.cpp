@@ -201,7 +201,7 @@ int FSpeechRecoginzer::sr_init(struct speech_rec * sr, enum sr_audsrc aud_src,
 			goto fail;
 		}
 	}
-	//°ó¶¨´úÀí
+	//ï¿½ó¶¨´ï¿½ï¿½ï¿½
 	//GettedResult.BindUObject(ASpeechActor, ASpeechActor::SpeechResult);
 	return 0;
 
@@ -301,7 +301,7 @@ int FSpeechRecoginzer::sr_stop_listening(struct speech_rec *sr)
 //	}
 //	sr->audio_status = MSP_AUDIO_SAMPLE_CONTINUE;
 //
-//	if (MSP_REC_STATUS_SUCCESS == sr->rec_stat) { //ÒÑ¾­ÓÐ²¿·ÖÌýÐ´½á¹û
+//	if (MSP_REC_STATUS_SUCCESS == sr->rec_stat) { //ï¿½Ñ¾ï¿½ï¿½Ð²ï¿½ï¿½ï¿½ï¿½ï¿½Ð´ï¿½ï¿½ï¿½
 //		rslt = QISRGetResult(sr->session_id, &sr->rec_stat, 0, &ret);
 //		if (MSP_SUCCESS != ret) {
 //			UE_LOG(CCJError, Error, TEXT("\nQISRGetResult failed! error code: %d\n"), ret);

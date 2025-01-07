@@ -39,7 +39,6 @@ public class XunFei_AIUI : ModuleRules
 	{
 
         // We want to distribute binaries-only, not source.
-        bOutputPubliclyDistributable = true;
 
         PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
         bEnableUndefinedIdentifierWarnings = false;

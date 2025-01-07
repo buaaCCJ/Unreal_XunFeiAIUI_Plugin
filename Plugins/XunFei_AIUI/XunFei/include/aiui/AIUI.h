@@ -13,7 +13,7 @@
 #include "AIUIErrorCode.h"
 #include "AIUIType.h"
 #include "AIUICommon.h"
-
+#include  "windows.h"
 using namespace std;
 
 namespace aiui {

@@ -24,7 +24,7 @@
 #include <mmsystem.h>   
 #include <process.h>
 #include <errno.h>
-// 自定义定义静态Log 包含WinRec.h使用
+// 锟皆讹拷锟藉定锟藉静态Log 锟斤拷锟斤拷WinRec.h使锟斤拷
 DEFINE_LOG_CATEGORY_STATIC(CCJLog, Log, All);
 DEFINE_LOG_CATEGORY_STATIC(CCJWarning, Warning, All);
 DEFINE_LOG_CATEGORY_STATIC(CCJError, Error, All);

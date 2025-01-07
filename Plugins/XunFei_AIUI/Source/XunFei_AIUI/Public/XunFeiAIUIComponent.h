@@ -7,7 +7,7 @@
 #include "Sound/SoundWaveProcedural.h"
 
 #include "XunFeiAIUIComponent.generated.h"
-DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIATGetDelegateSignature, FString,FString);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FIATGetDelegateSignature, FString,test,FString,answer,int,id);
 
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )

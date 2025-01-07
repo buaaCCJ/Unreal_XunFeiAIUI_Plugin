@@ -2,7 +2,7 @@
 /*
  * FileUtil.h
  *
- *  Created on: 2017年2月21日
+ *  Created on: 2017锟斤拷2锟斤拷21锟斤拷
  *      Author: hj
  */
 
@@ -13,7 +13,7 @@
 #include <fstream>
 
 #include <aiui/AIUIType.h>
-
+#include  "windows.h"
 using namespace std;
 using namespace aiui;
 
@@ -21,9 +21,9 @@ using namespace aiui;
 #include "XunFei_AIUI.h"
 
 /**
- * 文件工具类。
+ * 锟侥硷拷锟斤拷锟斤拷锟洁。
  *
- * @author <a href="http://www.xfyun.cn">讯飞开放平台</a>
+ * @author <a href="http://www.xfyun.cn">讯锟缴匡拷锟斤拷平台</a>
  */
 class FileUtil
 {
@@ -41,9 +41,9 @@ public:
 	static bool isDirectory(const FString &path);
 
 	/**
-	 * 当目录路径不存在时创建目录。
+	 * 锟斤拷目录路锟斤拷锟斤拷锟斤拷锟斤拷时锟斤拷锟斤拷目录锟斤拷
 	 *
-	 * @param path 路径，以"/"结尾
+	 * @param path 路锟斤拷锟斤拷锟斤拷"/"锟斤拷尾
 	 */
 	static bool makeDirIfNoExist(const FString &path);
 
@@ -54,9 +54,9 @@ public:
 	static FString getCurrentTime();
 
 	/**
-	 * 新分配Buffer，读取文件到Buffer，Buffer使用完之后需要使用者手动释放。
+	 * 锟铰凤拷锟斤拷Buffer锟斤拷锟斤拷取锟侥硷拷锟斤拷Buffer锟斤拷Buffer使锟斤拷锟斤拷之锟斤拷锟斤拷要使锟斤拷锟斤拷锟街讹拷锟酵放★拷
 	 *
-	 * @return Buffer地址，文件读取错误返回NULL
+	 * @return Buffer锟斤拷址锟斤拷锟侥硷拷锟斤拷取锟斤拷锟襟返伙拷NULL
 	 */
 	static Buffer* readFileAsBuffer(const FString &filePath);
 
